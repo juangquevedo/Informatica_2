@@ -5,6 +5,7 @@
 \usepackage{url}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\usepackage{hyperref}
 
 \begin{document}
 
@@ -34,31 +35,12 @@
 \newpage
 
 \large
-Cuando se utiliza hardware se puede tener la necesidad de vigilar algún periférico para ejecutar alguna instrucción, pero ¿cómo lo podemos lograr esto? Ya que, si se implementa dentro del código que se ejecuta se tendría que parar el código cíclicamente para revisar la señal del periférico, esto le cuesta tiempo al programa que podría utilizar en ejecutar las otras instrucciones. Hay una solución para este problema que son las interrupciones, lo que hacen es reservar una dirección de memoria para que cuando el procesador reciba una señal determinada, pause el programa que está ejecutando y realice las instrucciones que se encuentran en esa dirección de memoria, cuando termine de ejecutar estas instrucciones reanudara las instrucciones interrumpidas por la señal del periférico.\cite{maria2018microprocesadores}
+Cuando se utiliza hardware se puede tener la necesidad de vigilar algún periférico para ejecutar alguna instrucción, pero ¿cómo lo podemos lograr esto? Ya que, si se implementa dentro del código que se ejecuta se tendría que parar el código cíclicamente para revisar la señal del periférico, esto le cuesta tiempo al programa que podría utilizar en ejecutar las otras instrucciones. Hay una solución para este problema que son las interrupciones, lo que hacen es reservar una dirección de memoria para que cuando el procesador reciba una señal determinada, pause el programa que está ejecutando y realice las instrucciones que se encuentran en esa dirección de memoria, cuando termine de ejecutar estas instrucciones reanudara las instrucciones interrumpidas por la señal del periférico. Las interrupciones no solo se utilizan en el hardware también se utilizan en el software, esto ya que en ocasiones se necesita recolectar información del disco duro, entonces para no parar el programa a la espera de esta información se utiliza una interrupción para indicar que la información ya está disponible.\cite{Sistemasintegrados}
 
+\vspace{10}
 
-\newpage
-\bf{\sc\Huge GRANDES INVENTOS}
-\section{INVERSOR}
 \large
-La función de un inversor es cambiar un voltaje de entrada de corriente continua a un voltaje simétrico de salida de corriente alterna, con la magnitud y frecuencia deseada por el usuario o el diseñador. Los inversores se utilizan en una gran variedad de aplicaciones, desde pequeñas fuentes de alimentación para computadoras, hasta aplicaciones industriales para controlar alta potencia. Los inversores también se utilizan para convertir la corriente continua generada por los paneles solares fotovoltaicos, acumuladores o baterías, etc, en corriente alterna y de esta manera poder ser inyectados en la red eléctrica o usados en instalaciones eléctricas aisladas.
-
-\vspace{15PT}
-Un inversor simple consta de un oscilador que controla a un transistor, el cual se utiliza para interrumpir la corriente entrante y generar una onda rectangular.
-Esta onda rectangular alimenta a un transformador que suaviza su forma, haciéndola parecer un poco más una onda senoidal y produciendo el voltaje de salida necesario. Las formas de onda de salida del voltaje de un inversor ideal debería ser sinusoidal. Una buena técnica para lograr esto es utilizar la técnica de PWM logrando que la componente principal senoidal sea mucho más grande que las armónicas superiores.
-
-\vspace{15PT}
-Los inversores más modernos han comenzado a utilizar formas más avanzadas de transistores o dispositivos similares, como los tiristores, los triac o los IGBT.
-
-\vspace{15PT}
-Los inversores más eficientes utilizan varios artificios electrónicos para tratar de llegar a una onda que simule razonablemente a una onda senoidal en la entrada del transformador, en vez de depender de éste para suavizar la onda.
-
-\vspace{30pt}
-\section{DRONES}
-
-Los llamados “drones” son vehículos aéreos no tripulados y controlados remotamente que hasta ahora se habían usado principalmente en acciones militares y en un gran número de aplicaciones civiles, tales como la prevención y extinción de incendios o en tareas de seguridad, cartografía y servicios forestales.
-
-Pero el abaratamiento progresivo de los componentes electrónicos ha permitido la llegada de este tipo de aeronaves al ámbito puramente recreativo, escenario que la firma gala Parrot aprovechó hace un par de años para diversificar su línea de productos y lanzar al mercado su primer AR.Drone.
+Antes de las interrupciones se utilizaba el sondeo, es la manera simple para resolver el problema, que es que el microprocesador le pregunte constantemente al periférico que, si necesita su atención, pero este método era ineficiente ya que gastaba tiempo y capacidad del microprocesador que se podrían estar siendo usadas por las instrucciones, además que entre más periféricos controle el microprocesador mas tiempo va a mal gastar el procesador en preguntarle si necesita ser usado. Al ver este problema se idearon las interrupciones que permiten que no sea el procesador el que le pregunte al periférico si necesita su atención, si no, que el periférico sea el que le pide al microprocesador que le preste atención.\cite{interruptsmadeeasy}
 
 \newpage
 
